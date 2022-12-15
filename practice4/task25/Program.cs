@@ -4,14 +4,12 @@ Console.WriteLine(Pow(number, degree));
 
 int InputNumber(string text)
 {
-    string str;
     int number;
     
     while (true)
     {
         Console.WriteLine($"Введите {text}");
-        str = Console.ReadLine();
-        if (int.TryParse(str, out number))
+        if (int.TryParse(Console.ReadLine(), out number))
         {
             break;
         }
