@@ -1,15 +1,19 @@
-﻿int[] arr = randArray();
+﻿const int SIZE = 4;
+const int LEFT_RANGE = -10;
+const int RIGHT_RANGE = 10;
+
+int[] arr = randArray(SIZE, LEFT_RANGE, RIGHT_RANGE);
 Console.WriteLine(string.Join(", ", arr));
 Console.WriteLine(SumOnOdd(arr));
 
-int[] randArray()
+int[] randArray(int size, int leftRange, int rightRange)
 {   
-    int[] array = new int[4];
+    int[] array = new int[size];
     Random rand = new Random();
 
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = rand.Next(-10, 10);
+        array[i] = rand.Next(leftRange, rightRange);
     }
 
     return array;
