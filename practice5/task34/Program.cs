@@ -1,15 +1,15 @@
-﻿int[] arr = randArray();
+﻿int[] arr = randArray(4, 100 , 1000);
 Console.WriteLine(string.Join(", ", arr));
 Console.WriteLine(CountEvenNumbers(arr));
 
-int[] randArray()
+int[] randArray(int size, int leftRange, int rightRange)
 {   
-    int[] array = new int[4];
+    int[] array = new int[size];
     Random rand = new Random();
 
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = rand.Next(0,300);
+        array[i] = rand.Next(leftRange,rightRange);
     }
 
     return array;
