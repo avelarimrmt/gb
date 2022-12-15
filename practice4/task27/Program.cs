@@ -3,14 +3,13 @@ Console.WriteLine(Sum(number));
 
 int InputNumber()
 {
-    string str;
     int number;
     
     while (true)
     {
         Console.WriteLine("Введите число");
-        str = Console.ReadLine();
-        if (int.TryParse(str, out number))
+       
+        if (int.TryParse(Console.ReadLine(), out number))
         {
             break;
         }
