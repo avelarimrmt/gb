@@ -26,23 +26,6 @@ double[] FindArithmeticMean(int[,] array)
     return average;
 }
 
-int InputNumber(string text)
-{
-    int number;
-    
-    while (true)
-    {
-        Console.WriteLine($"Введите {text}");
-        if (int.TryParse(Console.ReadLine(), out number))
-        {
-            break;
-        }
-        Console.WriteLine("Не удалось распознать число, попробуйте еще раз");
-    }
-
-    return number;
-}
-
 int[,] randArray(int M, int N, int leftRange, int rightRange)
 {   
     int[,] array = new int[M, N];
