@@ -5,22 +5,14 @@ PrintTwoDimensionalArray(matrix);
 
 int[,] fillSpiralArray(int N)
 {   
-    int temp = 1;
     int[,] array = new int[N, N];
-
-    int tempM = 0;
-    int tempN = 0;
-
-     for (int i = 0; i < N; i++)
-        for (int j = 0; j < N; j++)
-            array[i,j] = 0;
     
-    for (int i = 0; i < N - tempM; i++)
+    for (int i = 0; i < N; i++)
     {
-        for (int j = 0; j < N - tempN; j++ )
+        for (int j = 0; j < N; j++ )
         {
             int directionRing = (j - i + N)/N;
-            temp = i + j + 1;
+            int temp = i + j + 1;
             array[i, j] = temp * directionRing + Math.Abs(directionRing - 1) * ((4*N - 2 - temp)); //заполнение внешнего кольца
         }
     }
